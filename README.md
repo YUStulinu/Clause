@@ -261,7 +261,7 @@ Without the analysis service, Clause still reads and compares contracts. It only
 them, or tell a reworded clause from a changed one.
 
 Tests:
-- `./mvnw test` in `backend/` runs 21 tests: reading, splitting, facts, diff, alignment, and the API
+- `./mvnw test` in `backend/` runs 23 tests: reading, splitting, facts, diff, alignment, and the API
   with the service mocked;
 - `python -m pytest` in `service/` runs 17 tests: the four checks, the comparison and the API, with
   stand-in models;
