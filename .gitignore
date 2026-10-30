@@ -1,0 +1,14 @@
+# Build output
+backend/target/
+backend/src/main/resources/static/
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+service/.venv/
+.pytest_cache/
+
+# Downloaded and generated
+/third_party/
+/data/

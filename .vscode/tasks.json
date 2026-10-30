@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "fetch dependencies", "type": "shell", "command": "bash scripts/fetch-deps.sh", "problemMatcher": [] },
+    { "label": "build the frontend", "type": "shell", "command": "npm run build", "options": { "cwd": "${workspaceFolder}/frontend" }, "problemMatcher": [] },
+    { "label": "run the backend", "type": "shell", "command": "./mvnw spring-boot:run", "options": { "cwd": "${workspaceFolder}/backend" }, "isBackground": true, "problemMatcher": [] },
+    { "label": "run the analysis service", "type": "shell", "command": ".venv/Scripts/python -m clause_service.server", "options": { "cwd": "${workspaceFolder}/service" }, "isBackground": true, "problemMatcher": [] },
+    { "label": "Java tests", "type": "shell", "command": "./mvnw test", "options": { "cwd": "${workspaceFolder}/backend" }, "group": "test", "problemMatcher": [] },
+    { "label": "Python tests", "type": "shell", "command": ".venv/Scripts/python -m pytest -q", "options": { "cwd": "${workspaceFolder}/service" }, "group": "test", "problemMatcher": [] },
+    { "label": "frontend tests", "type": "shell", "command": "npx vitest run", "options": { "cwd": "${workspaceFolder}/frontend" }, "group": "test", "problemMatcher": [] }
+  ]
+}

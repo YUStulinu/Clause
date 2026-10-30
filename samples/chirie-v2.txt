@@ -1,0 +1,36 @@
+CONTRACT DE ÎNCHIRIERE
+(exemplu scris pentru demonstrația aplicației Clause; nu este un contract real)
+
+Încheiat astăzi, 1 martie 2026, între:
+Popescu Ion, în calitate de proprietar, denumit în continuare „Proprietarul”, și
+Ionescu Maria, în calitate de chiriaș, denumită în continuare „Chiriașul”.
+
+Art. 1 Obiectul contractului
+1.1. Proprietarul dă în folosința Chiriașului apartamentul situat în București, str. Exemplului nr. 10, ap. 5, compus din 2 camere.
+1.2. Apartamentul este predat mobilat, potrivit procesului-verbal de predare-primire din anexă.
+
+Art. 2 Durata
+2.1. Contractul se încheie pe o durată de 12 luni, de la 1 martie 2026 până la 28 februarie 2027.
+2.2. La expirare, contractul se prelungește automat cu încă 12 luni, iar chiria se indexează cu rata inflației, dacă niciuna dintre părți nu îl denunță cu cel puțin 60 de zile înainte.
+
+Art. 3 Chiria și plata
+3.1. Chiria lunară este de 2.000 lei și se plătește până pe data de 5 a fiecărei luni, în contul Proprietarului.
+3.2. La semnarea contractului, Chiriașul plătește o garanție de 4.000 lei, care se restituie la încetarea contractului, după deducerea eventualelor daune.
+3.3. Utilitățile (energie electrică, gaze, apă, internet) și cheltuielile de întreținere sunt în sarcina Chiriașului.
+3.4. Chiriașul plătește Proprietarului o taxă de administrare de 150 lei pe lună.
+
+Art. 4 Penalități
+4.1. Pentru întârzierea la plata chiriei, Chiriașul datorează penalități de 0,5% din chirie pentru fiecare zi de întârziere.
+
+Art. 5 Încetarea contractului
+5.1. Oricare parte poate denunța contractul cu un preaviz scris de 60 de zile.
+5.2. Dacă Chiriașul nu plătește chiria timp de 2 luni consecutive, Proprietarul poate rezilia contractul fără preaviz.
+
+Art. 6 Obligațiile Chiriașului
+6.1. Chiriașul folosește apartamentul ca un bun proprietar și numai pentru locuit.
+6.2. Chiriașul poate subînchiria apartamentul fără acordul scris al Proprietarului.
+6.3. Chiriașul permite Proprietarului să viziteze apartamentul, cu anunțare prealabilă de 48 de ore.
+
+Art. 7 Dispoziții finale
+7.1. Orice modificare a contractului se face numai prin act adițional semnat de ambele părți.
+7.2. Litigiile se soluționează pe cale amiabilă, iar în caz contrar de instanțele competente din București.

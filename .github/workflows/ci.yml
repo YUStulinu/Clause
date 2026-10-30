@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    # Reading PDF, DOCX and text; splitting into clauses (Romanian and English, headings inside long
+    # lines); facts, word diff and clause alignment; the API with the analysis service mocked.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - run: ./mvnw -B -q verify
+
+  service:
+    # The checks against hallucination (anchor, numbers, names, verdicts) and the comparison, with a
+    # stand-in language model and entailment model; the HTTP API.
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: service
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+      - run: |
+          pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install transformers==5.22.0 fastapi==0.162.0 uvicorn==0.54.0 httpx==0.28.1 rapidfuzz==3.14.6 numpy==2.5.4 pytest==9.2.0
+          python -m pytest -q
+
+  frontend:
+    # Type checks, the highlighting logic, and the production build.
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npx vitest run
+      - run: npm run build
+
+# The evaluations need Qwen2.5-7B on a GPU and the CUAD dataset, so they run locally: see README.md.

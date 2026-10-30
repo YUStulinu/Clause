@@ -1,0 +1,7 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "python.defaultInterpreterPath": "${workspaceFolder}/service/.venv/Scripts/python.exe",
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}/service",
+  "search.exclude": { "third_party": true, "data": true, "**/node_modules": true, "backend/target": true }
+}

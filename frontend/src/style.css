@@ -1,0 +1,50 @@
+:root {
+  --bg: #f6f5f1;
+  --paper: #ffffff;
+  --ink: #1f2328;
+  --muted: #6b7280;
+  --line: #e4e1d8;
+  --accent: #2f5d8a;
+  --warn-bg: #fff6e0;
+  --warn-ink: #7a5300;
+  --ok: #2e7d4f;
+  --bad: #b3261e;
+  /* one colour per kind of finding */
+  --payment: #e8f1fb;
+  --payment-ink: #1d5a96;
+  --penalty: #fdecea;
+  --penalty-ink: #a1291f;
+  --termination: #f1ebfa;
+  --termination-ink: #5b3a99;
+  --obligation: #eaf6ee;
+  --obligation-ink: #276a3f;
+  --liability: #fff3e3;
+  --liability-ink: #8a5300;
+  --unusual: #fde9f2;
+  --unusual-ink: #9b1d5c;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button {
+  font: inherit;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+button.primary { background: var(--accent); border-color: var(--accent); color: white; }
+button:disabled { opacity: 0.5; cursor: default; }
+select { font: inherit; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--paper); }
+
+.kind-payment { --k: var(--payment); --k-ink: var(--payment-ink); }
+.kind-penalty { --k: var(--penalty); --k-ink: var(--penalty-ink); }
+.kind-termination { --k: var(--termination); --k-ink: var(--termination-ink); }
+.kind-obligation { --k: var(--obligation); --k-ink: var(--obligation-ink); }
+.kind-liability { --k: var(--liability); --k-ink: var(--liability-ink); }
+.kind-unusual { --k: var(--unusual); --k-ink: var(--unusual-ink); }

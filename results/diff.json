@@ -1,0 +1,166 @@
+{
+ "summary": {
+  "number": {
+   "tried": 5,
+   "found": 1.0,
+   "plain_text_diff": 1.0
+  },
+  "negation": {
+   "tried": 8,
+   "found": 1.0,
+   "plain_text_diff": 1.0
+  },
+  "removed": {
+   "tried": 8,
+   "found": 1.0,
+   "plain_text_diff": 1.0
+  },
+  "added": {
+   "tried": 8,
+   "found": 1.0,
+   "plain_text_diff": 1.0
+  },
+  "moved": {
+   "tried": 8,
+   "no_false_alarm": 1.0,
+   "plain_text_diff": 1.0
+  },
+  "formatting": {
+   "tried": 8,
+   "no_false_alarm": 0.875,
+   "plain_text_diff": 0.75
+  },
+  "reworded": {
+   "tried": 8,
+   "no_false_alarm": 0.5,
+   "plain_text_diff": 0.0
+  }
+ },
+ "false_alarms": [
+  {
+   "edit": "reworded",
+   "contract": "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT",
+   "reported": [
+    {
+     "kind": "MODIFIED",
+     "meaning": {
+      "id": "p11",
+      "meaning": "changed",
+      "reasons": [
+       "a reworded sentence no longer means the same"
+      ],
+      "sentence_scores": [
+       0.141,
+       0.985,
+       0.883,
+       0.981,
+       0.521,
+       0.966
+      ],
+      "explanation": "No change in required actions, payments or acceptances for the parties."
+     },
+     "facts": []
+    }
+   ]
+  },
+  {
+   "edit": "reworded",
+   "contract": "XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",
+   "reported": [
+    {
+     "kind": "MODIFIED",
+     "meaning": {
+      "id": "p9",
+      "meaning": "changed",
+      "reasons": [
+       "a reworded sentence no longer means the same"
+      ],
+      "sentence_scores": [
+       0.176
+      ],
+      "explanation": "The change removes the word 'if' before 'the product is or has not been purchased with a purchase order and payment fulfilled', making the condition more direct and removing any potential ambiguity."
+     },
+     "facts": []
+    }
+   ]
+  },
+  {
+   "edit": "reworded",
+   "contract": "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing Agreement_ Supply Agreement",
+   "reported": [
+    {
+     "kind": "MODIFIED",
+     "meaning": {
+      "id": "p7",
+      "meaning": "changed",
+      "reasons": [
+       "a reworded sentence no longer means the same"
+      ],
+      "sentence_scores": [
+       0.168,
+       0.962,
+       0.773,
+       0.969,
+       0.925,
+       0.458
+      ],
+      "explanation": "No change in obligations for either party regarding inspections, reports, Governmental Authority inspections, assistance, or liability for deficiencies."
+     },
+     "facts": []
+    }
+   ]
+  },
+  {
+   "edit": "formatting",
+   "contract": "GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement",
+   "reported": [
+    {
+     "kind": "ADDED",
+     "meaning": null,
+     "facts": []
+    },
+    {
+     "kind": "ADDED",
+     "meaning": null,
+     "facts": []
+    },
+    {
+     "kind": "MODIFIED",
+     "meaning": {
+      "id": "p8",
+      "meaning": "changed",
+      "reasons": [
+       "1 sentence(s) added"
+      ],
+      "sentence_scores": [],
+      "explanation": "",
+      "explanation_dropped": "Company must now directly contact the NFLA's authorized agent for immediate approval of advertising material and indemnify the NFLA against expenses related to Company's advertising."
+     },
+     "facts": []
+    }
+   ]
+  },
+  {
+   "edit": "reworded",
+   "contract": "GridironBionutrientsInc_20171206_8-K_EX-10.1_10972555_EX-10.1_Endorsement Agreement",
+   "reported": [
+    {
+     "kind": "MODIFIED",
+     "meaning": {
+      "id": "p8",
+      "meaning": "changed",
+      "reasons": [
+       "a reworded sentence no longer means the same"
+      ],
+      "sentence_scores": [
+       0.732,
+       0.135
+      ],
+      "explanation": "The change in tense from 'does not constitute' to 'will not constitute' and 'shall not be construed as' to 'will not be construed as' does not alter the parties' obligations, but emphasizes the non-constitutive nature of their agreement more strongly."
+     },
+     "facts": []
+    }
+   ]
+  }
+ ]
+}

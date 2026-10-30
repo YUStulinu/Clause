@@ -1,0 +1,373 @@
+{
+ "contracts": 30,
+ "labelled_spans": 192,
+ "recall_any": 0.823,
+ "recall_verified": 0.562,
+ "recall_verified_same_kind": 0.49,
+ "by_category": {
+  "Audit Rights": {
+   "labels": 14,
+   "any": 0.786,
+   "verified": 0.357,
+   "same_kind": 0.286
+  },
+  "Cap On Liability": {
+   "labels": 37,
+   "any": 0.811,
+   "verified": 0.486,
+   "same_kind": 0.459
+  },
+  "Covenant Not To Sue": {
+   "labels": 4,
+   "any": 0.5,
+   "verified": 0.5,
+   "same_kind": 0.25
+  },
+  "Exclusivity": {
+   "labels": 20,
+   "any": 0.6,
+   "verified": 0.35,
+   "same_kind": 0.25
+  },
+  "Insurance": {
+   "labels": 29,
+   "any": 0.828,
+   "verified": 0.552,
+   "same_kind": 0.552
+  },
+  "Liquidated Damages": {
+   "labels": 2,
+   "any": 1.0,
+   "verified": 0.5,
+   "same_kind": 0.0
+  },
+  "Minimum Commitment": {
+   "labels": 10,
+   "any": 0.8,
+   "verified": 0.6,
+   "same_kind": 0.0
+  },
+  "No-Solicit Of Customers": {
+   "labels": 4,
+   "any": 1.0,
+   "verified": 0.75,
+   "same_kind": 0.75
+  },
+  "No-Solicit Of Employees": {
+   "labels": 5,
+   "any": 1.0,
+   "verified": 0.8,
+   "same_kind": 0.8
+  },
+  "Non-Compete": {
+   "labels": 7,
+   "any": 0.857,
+   "verified": 0.571,
+   "same_kind": 0.571
+  },
+  "Non-Disparagement": {
+   "labels": 5,
+   "any": 1.0,
+   "verified": 1.0,
+   "same_kind": 1.0
+  },
+  "Notice Period To Terminate Renewal": {
+   "labels": 9,
+   "any": 0.889,
+   "verified": 0.889,
+   "same_kind": 0.889
+  },
+  "Price Restrictions": {
+   "labels": 1,
+   "any": 0.0,
+   "verified": 0.0,
+   "same_kind": 0.0
+  },
+  "Renewal Term": {
+   "labels": 13,
+   "any": 0.923,
+   "verified": 0.923,
+   "same_kind": 0.923
+  },
+  "Revenue/Profit Sharing": {
+   "labels": 13,
+   "any": 0.769,
+   "verified": 0.462,
+   "same_kind": 0.385
+  },
+  "Termination For Convenience": {
+   "labels": 12,
+   "any": 1.0,
+   "verified": 0.583,
+   "same_kind": 0.5
+  },
+  "Uncapped Liability": {
+   "labels": 7,
+   "any": 1.0,
+   "verified": 0.571,
+   "same_kind": 0.571
+  }
+ },
+ "findings": 1038,
+ "anchors": {
+  "repaired": 160,
+  "exact": 839,
+  "missing": 39
+ },
+ "statuses": {
+  "unsupported": 340,
+  "verified": 659,
+  "unanchored": 39
+ },
+ "kinds": {
+  "obligation": 524,
+  "unusual": 197,
+  "termination": 107,
+  "liability": 122,
+  "payment": 75,
+  "penalty": 13
+ },
+ "median_seconds_per_contract": 165.8,
+ "per_contract": [
+  {
+   "title": "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT",
+   "chars": 36530,
+   "clauses": 35,
+   "findings": 67,
+   "verified": 39,
+   "seconds": 384.0
+  },
+  {
+   "title": "ULTRAGENYXPHARMACEUTICALINC_12_23_2013-EX-10.9-SUPPLY AGREEMENT",
+   "chars": 14529,
+   "clauses": 44,
+   "findings": 26,
+   "verified": 20,
+   "seconds": 119.2
+  },
+  {
+   "title": "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",
+   "chars": 22332,
+   "clauses": 12,
+   "findings": 28,
+   "verified": 17,
+   "seconds": 157.6
+  },
+  {
+   "title": "DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING AGREEMENT",
+   "chars": 7245,
+   "clauses": 18,
+   "findings": 13,
+   "verified": 12,
+   "seconds": 56.0
+  },
+  {
+   "title": "CybergyHoldingsInc_20140520_10-Q_EX-10.27_8605784_EX-10.27_Affiliate Agreement",
+   "chars": 33763,
+   "clauses": 81,
+   "findings": 70,
+   "verified": 48,
+   "seconds": 328.3
+  },
+  {
+   "title": "VNUE,INC_07_10_2015-EX-10.1-SPONSORSHIP AGREEMENT",
+   "chars": 20233,
+   "clauses": 23,
+   "findings": 36,
+   "verified": 24,
+   "seconds": 184.7
+  },
+  {
+   "title": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2",
+   "chars": 2275,
+   "clauses": 3,
+   "findings": 2,
+   "verified": 2,
+   "seconds": 15.8
+  },
+  {
+   "title": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement",
+   "chars": 14893,
+   "clauses": 14,
+   "findings": 25,
+   "verified": 15,
+   "seconds": 134.0
+  },
+  {
+   "title": "CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",
+   "chars": 12467,
+   "clauses": 23,
+   "findings": 21,
+   "verified": 14,
+   "seconds": 93.8
+  },
+  {
+   "title": "SteelVaultCorp_20081224_10-K_EX-10.16_3074935_EX-10.16_Affiliate Agreement",
+   "chars": 17666,
+   "clauses": 29,
+   "findings": 35,
+   "verified": 15,
+   "seconds": 149.9
+  },
+  {
+   "title": "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION AGREEMENT",
+   "chars": 27010,
+   "clauses": 39,
+   "findings": 44,
+   "verified": 21,
+   "seconds": 225.4
+  },
+  {
+   "title": "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR AGREEMENT",
+   "chars": 14973,
+   "clauses": 24,
+   "findings": 24,
+   "verified": 18,
+   "seconds": 125.5
+  },
+  {
+   "title": "TURNKEYCAPITAL,INC_07_20_2017-EX-1.1-Strategic Alliance Agreement",
+   "chars": 12584,
+   "clauses": 37,
+   "findings": 23,
+   "verified": 18,
+   "seconds": 156.6
+  },
+  {
+   "title": "FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement",
+   "chars": 29742,
+   "clauses": 135,
+   "findings": 67,
+   "verified": 43,
+   "seconds": 275.1
+  },
+  {
+   "title": "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",
+   "chars": 12536,
+   "clauses": 28,
+   "findings": 26,
+   "verified": 20,
+   "seconds": 112.3
+  },
+  {
+   "title": "BLUEFLYINC_03_27_2002-EX-10.27-e-business Hosting Agreement",
+   "chars": 34988,
+   "clauses": 52,
+   "findings": 49,
+   "verified": 29,
+   "seconds": 251.4
+  },
+  {
+   "title": "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement Agreement",
+   "chars": 18068,
+   "clauses": 31,
+   "findings": 27,
+   "verified": 17,
+   "seconds": 165.8
+  },
+  {
+   "title": "BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT",
+   "chars": 37829,
+   "clauses": 73,
+   "findings": 63,
+   "verified": 42,
+   "seconds": 334.8
+  },
+  {
+   "title": "MEDALISTDIVERSIFIEDREIT,INC_05_18_2020-EX-10.1-CONSULTING AGREEMENT",
+   "chars": 24288,
+   "clauses": 28,
+   "findings": 33,
+   "verified": 15,
+   "seconds": 185.9
+  },
+  {
+   "title": "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement Agreement",
+   "chars": 17491,
+   "clauses": 30,
+   "findings": 26,
+   "verified": 17,
+   "seconds": 145.2
+  },
+  {
+   "title": "PerformanceSportsBrandsInc_20110909_S-1_EX-10.10_7220214_EX-10.10_Endorsement Agreement",
+   "chars": 26411,
+   "clauses": 34,
+   "findings": 37,
+   "verified": 25,
+   "seconds": 175.3
+  },
+  {
+   "title": "WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT",
+   "chars": 28732,
+   "clauses": 32,
+   "findings": 49,
+   "verified": 29,
+   "seconds": 255.4
+  },
+  {
+   "title": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP AGREEMENT",
+   "chars": 35813,
+   "clauses": 38,
+   "findings": 48,
+   "verified": 34,
+   "seconds": 239.3
+  },
+  {
+   "title": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part1",
+   "chars": 26093,
+   "clauses": 15,
+   "findings": 30,
+   "verified": 16,
+   "seconds": 182.6
+  },
+  {
+   "title": "ArconicRolledProductsCorp_20191217_10-12B_EX-2.7_11923804_EX-2.7_Trademark License Agreement",
+   "chars": 18050,
+   "clauses": 29,
+   "findings": 17,
+   "verified": 10,
+   "seconds": 110.8
+  },
+  {
+   "title": "ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT(1)",
+   "chars": 12009,
+   "clauses": 13,
+   "findings": 16,
+   "verified": 11,
+   "seconds": 88.2
+  },
+  {
+   "title": "ADUROBIOTECH,INC_06_02_2020-EX-10.7-CONSULTING AGREEMENT",
+   "chars": 12009,
+   "clauses": 13,
+   "findings": 15,
+   "verified": 12,
+   "seconds": 90.2
+  },
+  {
+   "title": "InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement",
+   "chars": 39529,
+   "clauses": 68,
+   "findings": 64,
+   "verified": 44,
+   "seconds": 306.7
+  },
+  {
+   "title": "PFSFUNDS_06_26_2020-EX-99.H OTH MAT CONT-SERVICES AGREEMENT",
+   "chars": 15045,
+   "clauses": 12,
+   "findings": 19,
+   "verified": 11,
+   "seconds": 114.2
+  },
+  {
+   "title": "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",
+   "chars": 23237,
+   "clauses": 42,
+   "findings": 38,
+   "verified": 21,
+   "seconds": 183.3
+  }
+ ]
+}

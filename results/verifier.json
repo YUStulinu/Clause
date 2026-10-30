@@ -1,0 +1,120 @@
+{
+ "summary": {
+  "original": {
+   "tried": 659,
+   "kept": 0.998
+  },
+  "party": {
+   "tried": 522,
+   "caught": 0.887
+  },
+  "wrong quote": {
+   "tried": 657,
+   "caught": 0.997
+  },
+  "invented quote": {
+   "tried": 659,
+   "caught": 0.944
+  },
+  "negation": {
+   "tried": 415,
+   "caught": 0.937
+  },
+  "number": {
+   "tried": 87,
+   "caught": 0.966
+  }
+ },
+ "missed": {
+  "party": [
+   {
+    "summary": "Advertising must stop using North's likeness and endorsement after the agreement ends, except for existing products.",
+    "quote": "Upon the expiration or termination of this Agreement, Company shall be prohibited from using or distributing any new or existing Advertising Materials using North's Likeness and North's Endorsement except for Endorsed Product with North's Likeness and/or North's Endorsement on the packaging that is already in the channel of retail distribution. Company shall be prohibited from selling or shipping any new Endorsed Product with North's Likeness and/or North's Endorsement on the packaging upon the expiration or termination of this Agreement."
+   },
+   {
+    "summary": "Advertising will comply with all laws and regulations related to North's likeness.",
+    "quote": "Company represents and warrants to North that it will comply with all rules, regulations, laws, orders, decrees and ordinances of the United States, each state and political subdivision thereof, and each and every foreign country having legal jurisdiction over any aspect of Company's activities under this Agreement, including, but not limited to, the use of North's Likeness in advertisements for and on behalf of the Company."
+   },
+   {
+    "summary": "ESSI rights to use their attributes end if the agreement is terminated.",
+    "quote": "ESSI's rights to the use of Talent and Talent's Attributes as set forth in Paragraphs 3 and 4 shall end immediately should this Agreement be terminated pursuant to Paragraph 10(A) or Paragraph 10(B) above."
+   },
+   {
+    "summary": "The Adviser's must maintain records as required by law and keep them for the required periods.",
+    "quote": "The Adviser shall create and maintain all necessary records in accordance with all applicable laws, rules and regulations, including, but not limited to, records required by Section 31(a) of the Act and the rules thereunder, as the same may be amended from time to time, pertaining to the various functions performed by it and not otherwise created and maintained by another party pursuant to contract with the Trust. Where applicable, such records shall be maintained by the Adviser for the periods and in the places required by Rule 31a-2 under the Act."
+   },
+   {
+    "summary": "The Adviser's is not liable for errors, mistakes, or omissions unless due to willful misfeasance, bad faith, gross negligence, or reckless disregard.",
+    "quote": "Except as may otherwise be required by the Act or the rules thereunder, neither the Adviser nor its directors, officers, employees, shareholders, agents, control persons or affiliates of any thereof (collectively, the \"Adviser Employees\") shall be subject to any liability for, or any damages, expenses or losses incurred by the Trust in connection with any error of judgment, mistake of law, any act or omission in connection with or arising out of any services rendered under or payments made pursuant to this Agreement or any other matter to which this Agreement relates, except by reason of willful misfeasance, bad faith or gross negligence on the part of any such persons in the performance of the duties of the Adviser under this Agreement or by reason of reckless disregard by any of such persons of the obligations and duties of the Adviser under this Agreement."
+   }
+  ],
+  "negation": [
+   {
+    "summary": "Neither party cannot assign rights without the other's consent.",
+    "quote": "Neither party to this Agreement shall assign the rights and benefits herein without the prior written consent of the other party."
+   },
+   {
+    "summary": "The agreement is not nonexclusive, meaning neither party is guaranteed to supply or purchase any specific item or conclude any business transaction with the other.",
+    "quote": "This Agreement is nonexclusive and sets forth the terms and conditions under which the Parties will supply and purchase Ingredients from the other Party. Nothing herein is intended to, nor does, guarantee that either Party will supply or purchase any specific, item, in any specific quantity, or conclude any business transaction with the other."
+   },
+   {
+    "summary": "No provision of the agreement cannot be construed against or interpreted to the disadvantage of any party by any court.",
+    "quote": "Each party acknowledges that it has participated in the negotiation of this Agreement and that no provision of this Agreement shall be construed against or he interpreted to the disadvantage of any party hereto by any court or other governmental or judicial authority by reason of such party having or deemed to have structured, dictated or drafted such provision."
+   },
+   {
+    "summary": "No third party does not have any rights under the agreement.",
+    "quote": "This Agreement is not for the benefit of any third party and shall be deemed not to give any right or remedy to such third party, whether referred to herein or not."
+   },
+   {
+    "summary": "The severability clause states that if any part of the Agreement is not declared invalid, the remaining parts remain valid.",
+    "quote": "Should any part of this Agreement, for any reason, be declared invalid by a court of competent jurisdiction, such determination shall be not affect the validity of any remaining portion, and such remaining portion shall remain in force and effect as if this Agreement had been executed with the invalid portion eliminated."
+   }
+  ],
+  "invented quote": [
+   {
+    "summary": "The entire agreement supersedes all prior or contemporaneous agreements.",
+    "quote": "atter. This Agreement supersedes all prior or contemporaneous agreements"
+   },
+   {
+    "summary": "The Liability Cap does not apply to intentional misconduct and gross negligence.",
+    "quote": "e Liability Cap will not apply to intentional misconduct and/or gross negligence"
+   },
+   {
+    "summary": "employs the Adviser to perform services as described in the Agreement.",
+    "quote": "employs the Adviser to perform the services described in this Agreemen"
+   },
+   {
+    "summary": "Provides certain personal credit, fraud detection, credit scoring services and credit monitoring for consumers.",
+    "quote": " provides certain personal credit, fraud detection, credit scoring services and credit monitoring for consumers"
+   },
+   {
+    "summary": "Party B has the discretion to arrange the layout and linkage of the channels, categories, articles and data relating to real estate and home furnishing on the Cooperation channel.",
+    "quote": "Party B has the discretion to arrange the layout and linkage of the channels, categories, articles and data relating to real estate and home furnishing on the Cooperation channel."
+   }
+  ],
+  "wrong quote": [
+   {
+    "summary": "Both parties agree to defend, indemnify, and hold harmless each other from claims arising from breaches of warranties or failure to provide Services.",
+    "quote": "Equidata warrants that it is an authorized provider of the Services as outlined in this Agreement and that it has the ability to provide said Services in the manner described herein."
+   },
+   {
+    "summary": "Dragon Systems may deduct from or set off against any sums owed to MMI any amounts owed by MMI.",
+    "quote": "MMI warrants providing the Services with due diligence and care in accordance\n\nwith the specifications set by Dragon Systems. Should MMI not supply the Services as agreed or should the Services become defective within 6 months from their delivery to Dragon Systems, Dragon Systems may at its option require MMI to complete or re-perform the Services within a reasonable period of time, rescind the contract or refuse payment of the compensation in part or in total, notwithstanding any damage claims."
+   }
+  ],
+  "number": [
+   {
+    "summary": "Either party can terminate the agreement for cause after 60 days of notice if the other party fails to cure a default.",
+    "quote": "If the defaulting party fails to cure such default or submit an acceptable written plan to resolve such default within thirty (30) days following notice of default, the non-defaulting party shall have the right to terminate this Agreement by furnishing the defaulting party with sixty (60) days written notice of termination."
+   },
+   {
+    "summary": "Company can sell existing inventory for 180 days post-termination if not in default, provides royalties, and pays within 30 days.",
+    "quote": "Any Endorsed Products that may have been manufactured by or for Company prior to the termination or expiration of the Contract Period may be sold by Company during the ninety (90) day period next following the date of termination or expiration; provided, however, that Company shall have no such rights unless (a) Company is not in default of any of its obligations hereunder on the date of termination or expiration, (b) within fifteen (15) days after the date of termination or expiration, Company shall furnish to Pey Dirt a written statement of the number and description of Endorsed Products actually in stock on the date of termination or expiration, (c) the quantity of Endorsed Products in stock on the date of termination or expiration is not in excess of a reasonable inventory based upon Company's selling requirements of Endorsed Products during the Contract Period, (d) Company shall continue to pay to Pey Dirt with respect to such sales a royalty at the rates specified herein, and (e) royalties payable pursuant to this section shall be paid within thirty (30) days following the end of each calendar month with respect\n\nto shipments made during such month."
+   },
+   {
+    "summary": "CONSULTANT agrees not to have any ownership interest in or participate in a Competitor for 24 months after consultancy ends.",
+    "quote": "CONSULTANT agrees that during its consultancy for REIT and for a period of twelve (12) months immediately following the termination of its consultancy with the Company for any reason, whether with or without cause, it will not: (a) have any ownership interest in, or participate in the financing, operation, management or control of, any Competitor; or (b) engage in or perform services for any Competitor, if such services either (1) are the same as or similar to (individually or in the aggregate) the services CONSULTANT performed for the Company during its consultancy with the Company, or (2) are performed with respect to products or services of the Competitor that are competitive with the products or services provided by the Company with which CONSULTANT was involved during its consultancy with the Company or about which it received Proprietary Information during its consultancy with the Company."
+   }
+  ]
+ }
+}
