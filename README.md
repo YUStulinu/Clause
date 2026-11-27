@@ -21,8 +21,9 @@ computer: the contract never leaves it.
 
 ![Comparing two versions: what changed in meaning, and the figures that changed](docs/compare.png)
 
-The screenshots use [samples/](samples/), a lease written for this demo in Romanian (one of the
-two languages Clause reads, with English).
+The screenshots use the English lease in [samples/](samples/) (`lease-v1.txt` and `lease-v2.txt`),
+written for this demo. The folder also has the same lease in Romanian (`chirie-v1.txt` and
+`chirie-v2.txt`), the other language Clause reads.
 
 ## How it works
 
@@ -325,7 +326,7 @@ Run them with the backend and the analysis service up.
 backend/    Spring Boot: document/ (reading, clause splitting), diff/ (facts, word diff, alignment), web/ (API, in-memory store)
 service/    Python: extract.py (the model), anchor.py, numbers.py, nli.py, verify.py (the checks), compare.py, server.py, evaluate_*.py
 frontend/   Vue 3 + TypeScript: the contract with quotes highlighted, the findings, the comparison
-samples/    a Romanian lease in two versions, written for the demo
+samples/    a lease in two versions, in English and in Romanian, written for the demo
 bench/      the hand labels of 99 findings
 results/    every number above, as JSON
 ```

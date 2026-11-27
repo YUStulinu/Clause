@@ -1,0 +1,36 @@
+RESIDENTIAL LEASE AGREEMENT
+(an example written for the Clause demo; not a real contract)
+
+Made on 1 March 2026 between:
+John Carter, as owner, hereinafter the "Landlord", and
+Emma Hughes, as tenant, hereinafter the "Tenant".
+
+Article 1 Subject of the lease
+1.1. The Landlord lets to the Tenant the flat at 10 Example Street, Flat 5, London, consisting of 2 rooms.
+1.2. The flat is handed over furnished, as described in the inventory attached to this lease.
+
+Article 2 Term
+2.1. This lease is concluded for 12 months, from 1 March 2026 to 28 February 2027.
+2.2. This lease may be extended by written agreement of the parties.
+
+Article 3 Rent and payment
+3.1. The monthly rent is £1,200 and is payable by the 5th day of each month into the Landlord's account.
+3.2. On signing, the Tenant pays a deposit of £2,400, which is returned at the end of the lease, less any damage.
+3.3. Utilities (electricity, gas, water, internet) and service charges are payable by the Tenant.
+
+Article 4 Penalties
+4.1. For late payment of the rent, the Tenant owes a penalty of 0.1% of the rent for each day of delay.
+4.2. The penalties may not exceed the amount of rent owed.
+
+Article 5 Tenant's obligations
+5.1. The Tenant shall use the flat with due care and only as a home.
+5.2. The Tenant may not sublet the flat without the Landlord's written consent.
+5.3. The Tenant shall allow the Landlord to visit the flat, with 48 hours' notice.
+
+Article 6 Termination
+6.1. Either party may terminate this lease by giving 30 days' written notice.
+6.2. If the Tenant fails to pay the rent for 2 consecutive months, the Landlord may terminate this lease without notice.
+
+Article 7 Final provisions
+7.1. Any change to this lease must be made by a written addendum signed by both parties.
+7.2. Disputes shall be settled amicably or, failing that, by the competent courts of London.
