@@ -1,0 +1,4 @@
+# The checks without the entailment model (python -m clause_service.check ... --no-nli): the anchor,
+# the numbers and the names. For the entailment check too, install requirements.txt instead.
+rapidfuzz==3.14.6
+httpx==0.28.1

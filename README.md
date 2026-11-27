@@ -260,11 +260,49 @@ and open http://127.0.0.1:8080.
 Without the analysis service, Clause still reads and compares contracts. It only cannot explain
 them, or tell a reworded clause from a changed one.
 
+### From an AI agent (Claude Code, Codex, Cursor)
+
+An agent can write the findings itself, so it needs neither Qwen2.5-7B nor a GPU. What it can't do
+alone is read a DOCX or a PDF's clauses faithfully, line two versions up clause by clause, or check
+its own statements against the text. Clause does those three things from the command line. The
+[Clause skill on Agensi](https://agensi.io/skills/contract-explained-with-checked-quotes) puts them
+to work:
+
+```bash
+java -jar clause.jar read contract.pdf > contract.json        # text, language, clauses with positions
+java -jar clause.jar compare old.docx new.docx                # changed clauses, figures, negations, may/shall
+cd service && python -m clause_service.check ../contract.json findings.json   # the four checks
+```
+
+`findings.json` is the agent's list of `{"kind", "party", "summary", "quote"}`. Each finding
+passes or is set aside by the app's checks: anchor, numbers, names and entailment. Every finding
+comes back, including two on the same quote. `--no-nli` skips the entailment model, so it needs
+only `rapidfuzz` and `httpx` (`requirements-check.txt`). The anchor, numbers and names still run,
+but a statement that reverses its quote ("may sublet" from "may not sublet") is then not caught.
+
+On the sample lease, Claude wrote 9 findings as an agent, 3 of them wrong on purpose:
+- the full check confirmed the 6 right ones (entailment 0.90 to 1.00);
+- it set aside the 3 wrong ones: a penalty of 1% instead of 0.1% ("missing 1", contradiction 0.98),
+  subletting reversed (contradiction 1.00), and a quote the contract doesn't contain;
+- with `--no-nli` the reversed subletting passed, as described above.
+
+`compare` on the two versions of the lease reported:
+- the late-payment penalty raised from 0,1% to 0,5%;
+- the notice raised from 30 to 60 days;
+- the subletting ban turned around;
+- the cap on penalties removed;
+- a new clause 3.4.
+
+Each [release](https://github.com/YUStulinu/Clause/releases) is one archive for every system:
+- `clause.jar` (Java 21), with the UI built in;
+- the Python checks;
+- the sample lease.
+
 Tests:
-- `./mvnw test` in `backend/` runs 23 tests: reading, splitting, facts, diff, alignment, and the API
-  with the service mocked;
-- `python -m pytest` in `service/` runs 17 tests: the four checks, the comparison and the API, with
-  stand-in models;
+- `./mvnw test` in `backend/` runs 26 tests: reading, splitting, facts, diff, alignment, the API
+  with the service mocked, and the command line;
+- `python -m pytest` in `service/` runs 18 tests: the four checks, findings checked from outside
+  (with and without the entailment model), the comparison and the API, with stand-in models;
 - `npx vitest run` in `frontend/` runs 5 tests: the highlighting.
 
 To reproduce the results:

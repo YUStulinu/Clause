@@ -12,3 +12,6 @@ service/.venv/
 # Downloaded and generated
 /third_party/
 /data/
+
+# Local skill and listing files (not published here)
+/dist/

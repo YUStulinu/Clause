@@ -1,0 +1,67 @@
+name: Release
+
+# Push a tag like v0.1.0: one archive for every system, since the backend is a Java jar. It holds
+#   clause.jar       the app (java -jar clause.jar, the UI built in) and the command line
+#                    (java -jar clause.jar read <contract> | compare <old> <new>); needs Java 21;
+#   service/         the Python checks (python -m clause_service.check), with requirements-check.txt
+#                    for the light install and requirements.txt for the entailment model;
+#   samples/         the Romanian lease in two versions, to try it on.
+# The archive is checked before it is published: read and compare on the samples, and the light check
+# run from the unpacked folder.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+      - name: The UI, built into the backend
+        working-directory: frontend
+        run: npm ci && npm run build
+      - name: The backend, tested and packaged
+        working-directory: backend
+        run: ./mvnw -B -q verify
+      - name: Package
+        run: |
+          name="clause-${GITHUB_REF_NAME}"
+          mkdir -p "$name/service"
+          cp backend/target/clause-*.jar "$name/clause.jar"
+          cp -r service/clause_service service/requirements.txt service/requirements-check.txt "$name/service/"
+          cp -r samples README.md LICENSE "$name/"
+          find "$name" -name __pycache__ -prune -exec rm -rf {} +
+          zip -qr "$name.zip" "$name"
+      - name: Check the archive from outside the repository
+        run: |
+          name="clause-${GITHUB_REF_NAME}"
+          cd "$RUNNER_TEMP" && unzip -q "$GITHUB_WORKSPACE/$name.zip" && cd "$name"
+          java -jar clause.jar read samples/chirie-v1.txt > v1.json
+          grep -q '"language" : "ro"' v1.json
+          java -jar clause.jar compare samples/chirie-v1.txt samples/chirie-v2.txt | tee cmp.json
+          grep -q '"figures_changed"' cmp.json
+          python -m venv venv && venv/bin/pip install -q -r service/requirements-check.txt
+          q=$(python -c "import json; t=json.load(open('v1.json', encoding='utf-8'))['text']; i=t.index('Chiria lunar'); print(json.dumps(t[i:i+50]))")
+          echo "[{\"kind\": \"payment\", \"party\": \"both\", \"summary\": \"x\", \"quote\": $q}]" > findings.json
+          cd service && ../venv/bin/python -m clause_service.check ../v1.json ../findings.json --no-nli | tee ../out.json
+          grep -q '"anchor": "exact"' ../out.json
+      - uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: clause-*.zip

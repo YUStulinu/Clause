@@ -103,6 +103,39 @@ def test_verdicts():
     assert sum(x.status == "verified" for x in out.values()) == 1
 
 
+def test_findings_from_elsewhere_are_checked_the_same_way():
+    from clause_service.check import check
+
+    contract = {"text": TEXT, "clauses": [{"id": c.id, "number": c.number, "title": c.title, "start": c.start, "end": c.end} for c in CLAUSES]}
+    items = [
+        {"kind": "penalty", "party": "Chiriașul", "summary": "Chiriașul datorează penalități de 0,1% din chirie pe zi de întârziere.",
+         "quote": "Chiriașul datorează penalități de 0,1% din chirie pentru fiecare zi de întârziere"},
+        {"kind": "termination", "party": "both", "summary": "Oricare parte poate denunța contractul cu un preaviz de 60 de zile.",
+         "quote": "Oricare parte poate denunța contractul cu un preaviz scris de 30 de zile."},
+        {"kind": "unusual", "party": "both", "summary": "Contractul nu poate fi denunțat.",
+         "quote": "Oricare parte poate denunța contractul cu un preaviz scris de 30 de zile."},
+        {"kind": "unusual", "party": "both", "summary": "Chiria poate fi mărită oricând.", "quote": "Proprietarul poate mări chiria oricând."},
+    ]
+    full = check(contract, items, FakeNli())
+    assert [f["summary"] for f in full["verified"]] == [items[0]["summary"]]
+    assert full["verified"][0]["passage"].startswith("Chiriașul datorează")
+    reasons = {f["summary"]: f for f in full["set_aside"]}
+    assert reasons[items[1]["summary"]]["checks"]["numbers"] == "missing 60"
+    assert reasons[items[3]["summary"]]["status"] == "unanchored"
+
+    # Without the entailment model, a negated statement over a real quote is not caught: say so.
+    light = check(contract, items, None)
+    assert {f["summary"] for f in light["verified"]} == {items[0]["summary"], items[2]["summary"]}
+    assert all(f["checks"]["entailment"] == "skipped" for f in light["verified"])
+    with pytest.raises(ValueError):
+        check(contract, [{"kind": "advice", "summary": "x", "quote": "y"}])
+
+    # Two statements of one kind on one quote: the wrong one is reported, not merged away.
+    twins = [items[0], {**items[0], "summary": "Chiriașul datorează penalități de 1% din chirie pe zi."}]
+    out = check(contract, twins, FakeNli())
+    assert len(out["verified"]) == 1 and out["set_aside"][0]["checks"]["numbers"] == "missing 1"
+
+
 def test_chunks_keep_clauses_whole_and_split_long_ones():
     text = ("A" * 100 + "\n") * 50  # 5,050 characters
     cl = [ClauseRef("c0", "1", "", 0, 2000), ClauseRef("c1", "2", "", 2000, len(text))]
