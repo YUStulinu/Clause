@@ -287,11 +287,13 @@ On the sample lease, Claude wrote 9 findings as an agent, 3 of them wrong on pur
 - with `--no-nli` the reversed subletting passed, as described above.
 
 `compare` on the two versions of the lease reported:
+- renewal by written agreement replaced by automatic renewal for 12 months, with the rent indexed
+  to inflation;
+- a new monthly administration fee of 150 lei;
 - the late-payment penalty raised from 0,1% to 0,5%;
 - the notice raised from 30 to 60 days;
 - the subletting ban turned around;
-- the cap on penalties removed;
-- a new clause 3.4.
+- the cap on penalties removed.
 
 Each [release](https://github.com/YUStulinu/Clause/releases) is one archive for every system:
 - `clause.jar` (Java 21), with the UI built in;
